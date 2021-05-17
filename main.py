@@ -1,12 +1,11 @@
-from cpf_cnpj import Documento
-from validate_docbr import CNPJ
+import re
+from TelefonesBr import TelefonesBr
 
-# cpf_um = Cpf("15316264754")
-# print(cpf_um)
+telefone = "556126481234"
 
-# exemplo_cnpj = "35379838000112"
-exemplo_cpf = "3200783204462"
-# cnpj = CNPJ()
-# print(cnpj.validate(exemplo_cnpj))
-documento = Documento.cria_documento(exemplo_cpf)
-print(documento)
+telefone_objeto = TelefonesBr(telefone)
+# padrao = "([0-9]{2,3})?([0-9]{2})?([0-9]{4,5})([0-9]{4})"
+# resposta = re.findall(padrao, telefone)
+# print(resposta)
+
+print(telefone_objeto)
